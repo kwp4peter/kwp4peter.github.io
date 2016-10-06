@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Kwp4peter.GitHub.io by kwp4peter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Kwp4peter.GitHub.io</h1>
+      <h2 class="project-tagline">School Websites</h2>
+    </section>
+
+    <section class="main-content">
+      <p>&lt;!DOCTYPE html&gt;</p>
+
+<p></p>
+
+<pre><code>&lt;head&gt;
+
+&lt;title&gt;Peter Whelpley&lt;/title&gt;
+
+&lt;meta charset="utf-8" /&gt;
+
+&lt;link href='https://fonts.googleapis.com/css?family=Roboto+Condensed|Oswald' rel='stylesheet' type='text/css'&gt;
+
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+
+    //BACKGROUND SHIFT JQUERY
+
+    $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+
+        if(scrollTop &gt;= 150){
+            $('#background').addClass('shift');
+        }
+
+        else
+        {
+            $('#background').removeClass('shift');
+        }
+    });
+
+    //END BACKGROUND SHIFT JQUERY
+
+    //----------------------------
+
+    //SIDEBAR STATUS SHIFT
+
+    $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+
+        if(scrollTop &gt;= 150){
+            $('.homebutton').addClass('buttonshift');
+        }
+
+        else
+        {
+            $('.homebutton').removeClass('buttonshift');
+        }
+
+        if(scrollTop &gt;= 150 &amp;&amp; scrollTop &lt;= 1250){
+            $('.biobutton').addClass('buttonshift');
+        }
+
+        else
+        {
+            $('.biobutton').removeClass('buttonshift');
+        }
+
+        if(scrollTop &gt;= 1250 &amp;&amp; scrollTop &lt;= 2500){
+            $('.projectsbutton').addClass('buttonshift');
+        }
+
+        else
+        {
+            $('.projectsbutton').removeClass('buttonshift');
+        }
+
+        if(scrollTop &gt;= 2500 &amp;&amp; scrollTop &lt;= 3800){
+            $('.contactbutton').addClass('buttonshift');
+        }
+
+        else
+        {
+            $('.contactbutton').removeClass('buttonshift');
+        }
+    });
+
+    //----------------------------
+
+    //END SIDEBAR STATUS SHIFT
+
+    //SIDEBAR SMOOTH SCROLL TO DIV
+
+    jQuery(document).ready(function() {
+
+    jQuery('.homebutton').click(function(event) {
+        event.preventDefault();
+
+        jQuery('html, body').animate({scrollTop: 0}, 500);
+        return false;
+    })
+
+    });
+
+    jQuery(document).ready(function() {
+
+    jQuery('.projectsbutton').click(function(event) {
+        event.preventDefault();
+
+        var projOffset = $("#projects").offset().top;
+
+        jQuery('html, body').animate({scrollTop: projOffset - 50}, 500);
+        return false;
+    })
+
+    });
+
+    jQuery(document).ready(function() {
+
+    jQuery('.biobutton').click(function(event) {
+        event.preventDefault();
+
+        var bioOffset = $("#bio").offset().top;
+
+        jQuery('html, body').animate({scrollTop: bioOffset - 100}, 500);
+        return false;
+    })
+
+    });
+
+    jQuery(document).ready(function() {
+
+    jQuery('.contactbutton').click(function(event) {
+        event.preventDefault();
+
+        var conOffset = $("#contact").offset().top;
+
+        jQuery('html, body').animate({scrollTop: conOffset - 200}, 500);
+        return false;
+    })
+
+    });
+
+    //BEGIN PROJECTS SCRIPT//
+
+
+    //BEGIN SCHOOLWORK
+
+    jQuery(document).ready(function() {
+
+    $('.school').css('background', 'url(images/splash1.png)');
+
+    $('#header1').hide();
+
+    var count = 0;
+
+    jQuery('.school').click(function(event) {
+        event.preventDefault();
+
+        $('#header1').show('slow');
+
+        if(count == 0)
+        {
+            $('.school').css('background', 'url(images/projects/design1.png)');
+            count++;
+        }
+
+        else if (count == 1)
+        {
+            ++count;
+            $('.school').css('background', 'url(images/projects/design2.png)');
+
+        }
+
+        else if (count == 2)
+        {
+            ++count;
+            $('.school').css('background', 'url(images/projects/design3.png)');
+        }
+
+        else if (count == 3)
+        {
+            ++count;
+            $('.school').css('background', 'url(images/projects/design4.png)');
+        }
+
+        else if (count == 4)
+        {
+            ++count;
+            $('.school').css('background', 'url(images/projects/type1.png)');
+        }
+
+        else if (count == 5)
+        {
+            ++count;
+            $('.school').css('background', 'url(images/projects/type2.png)');
+        }
+
+        else if (count == 6)
+        {
+            ++count;
+            $('.school').css('background', 'url(images/projects/type3.png)');
+        }
+
+        else
+        {
+            $('.school').css('background', 'url(images/projects/type4.png');
+            count = 0;
+        }
+
+    })
+
+    });
+
+    //END SCHOOLWORK
+
+    //BEGIN INTERNSHIP
+
+        jQuery(document).ready(function() {
+
+    $('.internship').css('background', 'url(images/splash2.png)');
+
+    $('#header2').hide();
+
+    var count = 0;
+
+    jQuery('.internship').click(function(event) {
+        event.preventDefault();
+
+        $('#header2').show('slow');
+
+        if(count == 0)
+        {
+            $('.internship').css('background', 'url(images/internship/mcd1.png)');
+            count++;
+        }
+
+        else if (count == 1)
+        {
+            ++count;
+            $('.internship').css('background', 'url(images/internship/mcd2.png)');
+
+        }
+
+        else if (count == 2)
+        {
+            ++count;
+            $('.internship').css('background', 'url(images/internship/mcd3.png)');
+        }
+
+        else if (count == 3)
+        {
+            ++count;
+            $('.internship').css('background', 'url(images/internship/uwm1.png)');
+        }
+
+        else if (count == 4)
+        {
+            ++count;
+            $('.internship').css('background', 'url(images/internship/uwm2.png)');
+        }
+
+        else
+        {
+
+            $('.internship').css('background', 'url(images/internship/uwm3.png)');
+            count=0;
+        }
+
+
+    })
+
+    });
+
+&lt;/script&gt;
+
+&lt;link rel="stylesheet" href="style/style.css"&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;img id="background" src="images/background-blue.jpg" /&gt;
+
+    &lt;div id="nav"&gt;
+
+            &lt;a class="homebutton" href="#"&gt;&lt;span&gt;home&lt;/span&gt;&lt;/a&gt;
+            &lt;a class="biobutton" href="#"&gt;&lt;span&gt;bio&lt;/span&gt;&lt;/a&gt;
+            &lt;a class="projectsbutton" href="#"&gt;&lt;span&gt;home&lt;/span&gt;&lt;/a&gt;
+            &lt;a class="contactbutton" href="#"&gt;&lt;span&gt;content&lt;/span&gt;&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;!-- START BIO --&gt;
+
+    &lt;div id="bio"&gt;
+
+        &lt;div id="bioimage"&gt;
+
+            &lt;span&gt;Peter Whelpley&lt;/span&gt;
+
+        &lt;/div&gt;
+
+        &lt;div id="biocontent"&gt;
+
+            &lt;h1 id="header"&gt;About Me&lt;/h1&gt;
+
+            &lt;p&gt;&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbspCurrently attending the University of Wisconsin - Milwaukee for Design &amp; Visual Communication with a minor in Computer Science. In the past I have worked on Application UI &amp; UX design, as well as marketing, presentation and web design for Tali Payments. Beyond web design my interests include sculpture.  Wood and plaster are my favorite mediums to work in, and to push myself I try to work in a larger scale for my work.  Pushing myself to make work, whether it's sculpture or design, is more important than focusing on the end goal. To me, a succesful artist is one who always makes, not one who ends up in a gallery setting.&lt;/p&gt;
+
+            &lt;p&gt;&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp My previous work experience includes developing a web page for Tali Payments, designing Application UI's using Illustrator, Photoshop, and AfterAffects (for the more convincing mock-ups).  At my previous job the expectations of me were to design an easy to use, clean, and modern application that could be easily translated to code since the team was so small.  If I wasn't working on UI design, I was doing advertisements and marketing design for the business students that were interning with the company.  I also helped my boss design presentation pitch-decks that were presented to prospective investors, such as McDonalds, Burger King, UWM, and others.&lt;/p&gt;
+
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;!-- START PROJECTS --&gt;
+
+    &lt;div id="projects"&gt;
+
+        &lt;h1 id="header1"&gt;Schoolwork&lt;/h1&gt;
+
+        &lt;h1 id="header2"&gt;Internships&lt;/h1&gt;
+
+        &lt;a class="school"&gt;&lt;span&gt;school&lt;/span&gt;&lt;/a&gt;
+
+        &lt;a class="internship"&gt;&lt;span&gt;internship&lt;/span&gt;&lt;/a&gt;
+
+        &lt;div id="web"&gt;
+
+        &lt;p&gt;Working example of web developement work can be found at &lt;a href="http://www.talipayments.com" target="blank"&gt;Tali Payments&lt;/a&gt;.&lt;/p&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;div id="contact"&gt;
+
+        &lt;div id="behancecontainer"&gt;
+
+            &lt;a id="behance" href="http://behance.com/peterwhelpley" target=blank&gt;&lt;span&gt;Behance&lt;/span&gt;&lt;/a&gt;
+
+            &lt;p&gt;http://www.behance.com/peterwhelpley&lt;/p&gt;
+
+        &lt;/div&gt;
+
+        &lt;div id="emailcontainer"&gt;
+
+            &lt;a id="email"&gt;&lt;span&gt;Email&lt;/span&gt;&lt;/a&gt;
+
+            &lt;p&gt;whelpley@uwm.edu&lt;/p&gt;
+
+        &lt;/div&gt;
+
+
+    &lt;/div&gt;
+
+
+&lt;/body&gt;
+</code></pre>
+
+<p></p>
+
+      <footer class="site-footer">
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
